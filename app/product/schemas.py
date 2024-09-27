@@ -18,4 +18,12 @@ class ProductCreate(ProductBase):
 
 
 class ProductList(ProductBase):
+    id: int
+
+
+class ProductOne(ProductBase):
+    id: int
+
+
+class ProductUpdate(ProductBase):
     pass

@@ -35,4 +35,8 @@ def get_orders(db: Session):
 
 
 def get_order_single(db: Session, order_id: int):
-    return db.query(models.Order).filter(models.Order.id == order_id).first()
+    db_order = db.query(models.Order).filter(models.Order.id == order_id).first()
+    if not db_order:
+        raise HTTPException(status_code=404, detail="Order not found")
+
+    return db_order
