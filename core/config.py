@@ -1,0 +1,6 @@
+import os
+
+# Data Base
+# SQLALCHEMY_DATABASE_URI = (
+#     f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}/{POSTGRES_DB}"
+# )
