@@ -11,3 +11,12 @@ class StatusEnum(str, Enum):
 
 class OrderCreate(BaseModel):
     status: StatusEnum
+
+
+class OrderList(BaseModel):
+    id: int
+    status: StatusEnum
+
+
+class OrderUpdate(BaseModel):
+    status: StatusEnum
