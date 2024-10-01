@@ -25,5 +25,12 @@ class ProductOne(ProductBase):
     id: int
 
 
+class ProductInOrder(BaseModel):
+    id: int
+    name: str
+    description: str
+    price: float
+
+
 class ProductUpdate(ProductBase):
     pass

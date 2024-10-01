@@ -10,7 +10,7 @@ router = APIRouter()
 
 @router.post("/orders/", response_model=schemas.OrderCreate)
 async def create_order(item: schemas.OrderCreate, db: Session = Depends(get_db)):
-    return service.create_order(db=db, item=item)
+    return service.create_order(db=db, order=item)
 
 
 @router.get("/orders/", response_model=List[schemas.OrderList])

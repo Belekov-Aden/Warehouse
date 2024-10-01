@@ -13,4 +13,4 @@ class Product(Base):
     price = Column(Float, nullable=False)
     count_in_storage = Column(Integer, nullable=False)
 
-
+    order_items = relationship("OrderItem", back_populates="product")

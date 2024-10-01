@@ -1,4 +1,5 @@
 from sqlalchemy import String, Integer, ForeignKey, Boolean, Column, Date, DateTime, Enum, Text, Float
+from sqlalchemy.orm import relationship
 
 from db.base_class import Base
 from ..order.models import Order
@@ -13,3 +14,6 @@ class OrderItem(Base):
     id_order = Column(Integer, ForeignKey('orders.id'))
     id_product = Column(Integer, ForeignKey('product.id'))
     count_in_order = Column(Integer, nullable=False)
+
+    order = relationship("Order", back_populates="order_items")
+    product = relationship("Product", back_populates="order_items")
